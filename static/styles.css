@@ -1,0 +1,74 @@
+body { 
+	padding-top: 20px;
+	margin: 3px;
+	background-color: #073642;
+	
+}
+.Image {
+	background-image: url(Images/journey_to_mars.jpeg)
+}
+b, p {
+	
+	color:white;
+	font-weight:bolder;
+	font-size:15px
+	
+}	
+
+.col-sm-6 {
+	padding: 10px;
+}
+
+
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+#image {
+	width: 60%;
+	height: 60%;
+	margin: 10px;
+	padding: 5px;
+}
+
+
+footer.footer{
+	background-color:#073642;
+	border-radius: .3rem;
+	text-align: center;
+	padding: 10px 10px;
+	background-image: url(Images/iconandgoldorbits.gif);
+	background-size: 120px;
+}
+
+
+th {
+	background: rgba(0, 57, 77, .3)
+}
+th{
+    text-align: center;
+	font-weight: bolder;
+	color : white;
+	border: 2px solid white;  
+	border-color:#ffff;
+	font-size:20px;
+}
+td{
+	text-align: center;
+	font-weight: bolder;
+	color : white;
+	border: 2px solid white;  
+	border-color:#ffff;
+	font-size:15px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+hr{
+	border-width: 2px;
+}
+
+

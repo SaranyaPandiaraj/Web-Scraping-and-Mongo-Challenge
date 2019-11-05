@@ -1,5 +1,5 @@
 from splinter import Browser
-from bs4 import BeautifulSoup as bs
+from bs4 import BeautifulSoup
 import time
 import pandas as pd
 
@@ -8,7 +8,7 @@ def init_browser():
     # @NOTE: Replace the path with your actual path to the chromedriver
     executable_path = {"executable_path": "C:/Users/Saranya/Downloads/chromedriver_win32/chromedriver.exe"}
     return Browser("chrome", **executable_path, headless=False)
-	
+    
 def scrape_info():
     browser = init_browser()
      
@@ -45,12 +45,12 @@ def scrape_info():
     browser.visit(JPL_Mars_url)
 
     browser.click_link_by_partial_text('FULL IMAGE')
-
+    time.sleep(1)
     browser.click_link_by_partial_text('more info')
-
+    time.sleep(1)
     JPL_Mars_html = browser.html
     JPL_Mars_soup = BeautifulSoup(JPL_Mars_html, 'html.parser')
-
+    time.sleep(1)
     Full_Image_Url = JPL_Mars_soup.find('figure', class_='lede').a['href']
     print(Full_Image_Url)
 
@@ -140,7 +140,7 @@ def scrape_info():
     
     Mars_Data = {
         "NASA_Mars_News_Title": NASA_Mars_News_Title,
-        "NASA_Mars_News_Title": NASA_Mars_News_Title,
+        "NASA_Mars_News_Para": NASA_Mars_News_Para,
         "Featured_Image_url": Featured_Image_url,
         "Mars_Weather": Mars_Weather,
         "Mars_Facts_table_html": Mars_Facts_table_html,
@@ -151,4 +151,4 @@ def scrape_info():
     browser.quit()
 
     # Return results
-    return Mars_Data	
+    return Mars_Data    
