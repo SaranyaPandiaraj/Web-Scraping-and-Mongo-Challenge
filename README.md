@@ -9,7 +9,7 @@ Challenge is to build a web application that scrapes various websites for data r
 
 <hr>
 
-The following details where scrapped from the below links:
+The above details in the website where scrapped from the below links:
 
 ### NASA Mars News Title & Paragraph
 [NASA Mars News Site](https://mars.nasa.gov/news/)
