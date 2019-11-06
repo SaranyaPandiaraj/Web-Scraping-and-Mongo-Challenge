@@ -9,7 +9,10 @@
   <meta http-equiv = 'expires' content = '0'>
   <meta http-equiv = 'pragma' content = 'no-cache'>
   <title>Web Scraping - Mission to Mars</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.css">
+  <link rel="stylesheet" href="https://bootswatch.com/_assets/css/custom.min.css">
 
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 
@@ -19,14 +22,26 @@
   <div class="container-fluid">
     <div class="Image">
 		<div class="text-center" >
-		  <h1><b><u>Mission to Mars</u></b></h1>
+		  <h1 class="heading"><i class="fas fa-globe-americas fa-spin fa-fw""></i> &nbsp;<u>Mission to Mars</u>&nbsp;<i class="fas fa-globe-americas fa-spin fa-fw"></i></h1>
+		  <br><br>
 		  <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
 		</div>
+		<br>
+		<marquee behavior="alternate">
+				
+		
+		<b class="desc1">&nbsp;&nbsp; 
+		<i class="fas fa-hand-point-up"></i> 
+		&nbsp;&nbsp;"For the Current News, Scrap the New Data"  &nbsp;&nbsp;
+		<i class="fas fa-hand-point-up"></i> </b>
+		
+	    </marquee>
+	
 			  <hr>
 		<div class = "row row-grid">
 		  <div class = "col-md-12">
 			<div class = "col-md-12">
-			  <h2><b><u>Latest Mars News</u></b></h2>
+			  <h2><u>Latest Mars News</u></h2>
 			  <h4><b>{{ Mars.NASA_Mars_News_Title }}</b></h4>
 			  <p>{{ Mars.NASA_Mars_News_Para }}</p>
 			  <hr>
@@ -36,7 +51,7 @@
 			  <img src="{{ Mars.Featured_Image_url }}" alt="Mars Featured Image" align="left" width = 100%>
 			</div>
 			<div class = "col-md-5">
-			  <h2><b><u>Current Weather on Mars</u></b></h2>
+			  <h2><u>Current Weather on Mars</u></h2>
 			  <br>
 			</div>
 			<div class = "col-md-5">
@@ -45,7 +60,7 @@
 			</div>
 			<div class = "col-md-5"> 
 			<br><br><text align="center">
-			  <h2><b><u>Mars Facts</u></b></h2>
+			  <h2 class="heading"><u>Mars Facts</u></h2>
 			  <br>
 			</div>
 			<div class = "col-md-5">
@@ -59,18 +74,28 @@
 	  </div>
       <div class = "col-md-12">
         <hr>
-        <h1><b><u>Mars Hemispheres</u></b></h1>
+        <h1 class="Mars" align="center"><u>Mars Hemispheres</u></h1><br>
       </div>
+	  <div>
+	  <h2 class="card-title" align="center"> <i class="far fa-hand-point-down fa-flip-horizontal"></i> &nbsp; &nbsp; Click to view the Full Image of the Mars Hemispheres &nbsp;  &nbsp; <i class="far fa-hand-point-down"></i></h4>
+	  </div>
       <div class = "col-md-12">   
           {% for x in Mars.Prod_Title_Img_Url %}
-            <div class = "col-md-6">
-              <img src = "{{x.Img_url}}" alt ="{{x.Title}}" width=100%>
-              <h4><b>{{x.Title}}</b></h4>
+            <div class = "col-md-3">
+			  <br><br>
+					<a href="{{x.Img_url}}"  target="_blank"	>				
+					<img src = "{{x.Img_url}}" alt ="{{x.Title}}" width=100%><br><br>
+				
+					<h4 class="card-text" align="center"><b>{{x.Title}}</b></h4>
+					</a>
+			  <br><br>
             </div>
           {% endfor %}
       </div>
     </div>        
   </div>
+  
+
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous">

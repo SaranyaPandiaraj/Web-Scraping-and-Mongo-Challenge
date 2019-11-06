@@ -83,7 +83,7 @@ def scrape_info():
     Mars_Facts_table = pd.read_html(Mars_Facts_url)
     Mars_Facts_table
 
-    Mars_Facts_table_df = Mars_Facts_table[1]
+    Mars_Facts_table_df = Mars_Facts_table[0]
     Mars_Facts_table_df.columns = ["Properties", "Value"]
     Mars_Facts_table_df
 
