@@ -18,6 +18,7 @@ The following details where scrapped from the below links:
 [USGS Astrogeology site](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars)
 
 <hr>
+
 ## <ins> Final Look of the Website </ins>
 
 ![Mission_To_Mars](Mission_To_Mars.png)
